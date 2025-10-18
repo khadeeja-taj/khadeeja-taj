@@ -1,16 +1,36 @@
-## Hi there 👋
+# 👋 Hi, I'm Khadeeja Taj
 
-<!--
-**khadeeja-taj/khadeeja-taj** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+💻 **Computing Student | 5th Semester at Islamic University**
 
-Here are some ideas to get you started:
+I’m passionate about technology and always eager to learn new things.  
+Currently exploring different areas of programming to improve my skills and build creative projects.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### 🌱 What I’m Learning
+- 🐍 **Python** – Intermediate level  
+- ⚙️ **C++** – Strengthening problem-solving & logic building  
+- 🌐 **Web Development** – HTML, CSS, JavaScript, and modern frameworks  
+
+---
+
+### 💡 Interests
+- Building web applications  
+- Learning new programming languages  
+- Exploring AI & automation concepts  
+
+---
+
+### 🚀 Goals
+- Become a skilled full-stack developer  
+- Contribute to open-source projects  
+- Keep growing in the field of computing  
+
+---
+
+### 📫 Connect with Me
+Feel free to reach out for collaboration or learning together!  
+📍 *Swabi, Pakistan*  
+📧 khadijataj116@gmail.com
+
+⭐ **“Code, learn, and keep improving every day.”**

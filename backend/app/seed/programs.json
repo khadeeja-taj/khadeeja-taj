@@ -1,0 +1,167 @@
+[
+  {
+    "code": "BISP_KAFAALAT",
+    "name": "Benazir Kafaalat (Unconditional Cash Transfer)",
+    "description": "Quarterly unconditional cash stipend for the poorest women, identified through the National Socio-Economic Registry (NSER) poverty means test.",
+    "category": "cash_assistance",
+    "country": "PK",
+    "region": "National",
+    "eligibility_rules": [
+      {"field": "pmt_score", "operator": "lte", "value": 32, "label": "NSER poverty (PMT) score is 32 or below", "required": true},
+      {"field": "has_cnic", "operator": "is_true", "label": "Applicant holds a valid CNIC", "required": true},
+      {"field": "gender", "operator": "eq", "value": "female", "label": "Registered beneficiary is a woman", "required": true}
+    ],
+    "required_documents": [
+      {"name": "CNIC", "description": "Valid national identity card of the woman beneficiary"},
+      {"name": "NSER registration", "description": "Household registered in the National Socio-Economic Registry"}
+    ],
+    "application_channel": "BISP Tehsil office / 8171 web portal",
+    "source_url": "https://www.bisp.gov.pk/",
+    "source_date": "2025-11-04",
+    "effective_date": "2025-01-01"
+  },
+  {
+    "code": "BISP_TALEEMI_WAZAIF",
+    "name": "Benazir Taleemi Wazaif (Education Stipend)",
+    "description": "Conditional cash transfer to Kafaalat families for keeping children (age 4-22) enrolled and attending school.",
+    "category": "education",
+    "country": "PK",
+    "region": "National",
+    "eligibility_rules": [
+      {"field": "pmt_score", "operator": "lte", "value": 32, "label": "Family qualifies under the Kafaalat poverty threshold", "required": true},
+      {"field": "children_in_school", "operator": "gte", "value": 1, "label": "At least one child enrolled in school", "required": true},
+      {"field": "has_cnic", "operator": "is_true", "label": "Guardian holds a valid CNIC", "required": true}
+    ],
+    "required_documents": [
+      {"name": "Child B-Form", "description": "Child registration certificate (Form-B)"},
+      {"name": "School enrolment proof", "description": "Proof of enrolment and attendance record"}
+    ],
+    "application_channel": "BISP Tehsil office",
+    "source_url": "https://www.bisp.gov.pk/Detail/YzNlY2Q2ZGYtNjIwZS00MjNiLWFhMmEtZGM5NWNkMjZhMjQ3",
+    "source_date": "2025-11-04",
+    "effective_date": "2025-01-01"
+  },
+  {
+    "code": "BISP_NASHONUMA",
+    "name": "Benazir Nashonuma Programme (Nutrition)",
+    "description": "Conditional cash and specialised nutritious food for pregnant/lactating women and children under two to prevent stunting.",
+    "category": "nutrition",
+    "country": "PK",
+    "region": "National",
+    "eligibility_rules": [
+      {"field": "pmt_score", "operator": "lte", "value": 32, "label": "Family qualifies under the poverty threshold", "required": true},
+      {"field": "has_pregnant_member", "operator": "is_true", "label": "Household has a pregnant or lactating woman", "required": true}
+    ],
+    "required_documents": [
+      {"name": "CNIC", "description": "Valid national identity card of the woman"},
+      {"name": "Pregnancy confirmation", "description": "Health facility confirmation of pregnancy or lactation"}
+    ],
+    "application_channel": "Nashonuma Facilitation Centre (health facility)",
+    "source_url": "https://www.bisp.gov.pk/Detail/YjAyMjI5ZDQtMTVkOC00YTNlLWE5NjctMjA1NTYwN2JhOTE3",
+    "source_date": "2025-11-04",
+    "effective_date": "2025-01-01"
+  },
+  {
+    "code": "PBM_IFA",
+    "name": "Pakistan Bait-ul-Mal — Individual Financial Assistance",
+    "description": "One-time financial assistance for medical treatment, rehabilitation and destitute individuals with no adequate source of income.",
+    "category": "cash_assistance",
+    "country": "PK",
+    "region": "National",
+    "eligibility_rules": [
+      {"field": "monthly_income", "operator": "lte", "value": 50000, "label": "Monthly household income is PKR 50,000 or below", "required": true},
+      {"field": "has_cnic", "operator": "is_true", "label": "Applicant holds a valid CNIC", "required": true}
+    ],
+    "required_documents": [
+      {"name": "CNIC", "description": "Valid national identity card"},
+      {"name": "Income proof", "description": "Declaration or evidence of low/no income"},
+      {"name": "Medical estimate", "description": "Hospital cost estimate (for medical assistance)"}
+    ],
+    "application_channel": "Pakistan Bait-ul-Mal district office",
+    "source_url": "https://pbm.gov.pk/",
+    "source_date": "2025-06-01",
+    "effective_date": "2025-01-01"
+  },
+  {
+    "code": "SEHAT_SAHULAT",
+    "name": "Sehat Sahulat / Sehat Card (Health Coverage)",
+    "description": "Micro health insurance giving eligible families cashless secondary and tertiary treatment at empanelled hospitals.",
+    "category": "health",
+    "country": "PK",
+    "region": "Punjab, KP, Gilgit-Baltistan, AJK",
+    "eligibility_rules": [
+      {"field": "province", "operator": "in", "value": ["Khyber Pakhtunkhwa", "Punjab", "Gilgit-Baltistan", "Azad Jammu and Kashmir"], "label": "Resident of a province where the Sehat Card is active", "required": true},
+      {"field": "has_cnic", "operator": "is_true", "label": "Family head holds a valid CNIC", "required": true}
+    ],
+    "required_documents": [
+      {"name": "CNIC", "description": "Valid national identity card of the family head"}
+    ],
+    "application_channel": "Empanelled hospital Sehat Card desk",
+    "source_url": "https://www.sehatsahulat.com.pk/",
+    "source_date": "2025-06-01",
+    "effective_date": "2025-01-01"
+  },
+  {
+    "code": "PUNJAB_HIMMAT",
+    "name": "Punjab Himmat Card (Persons with Disabilities)",
+    "description": "Quarterly cash assistance for registered persons with disabilities in Punjab who are unable to earn a livelihood.",
+    "category": "disability",
+    "country": "PK",
+    "region": "Punjab",
+    "eligibility_rules": [
+      {"field": "province", "operator": "eq", "value": "Punjab", "label": "Resident of Punjab", "required": true},
+      {"field": "has_disability", "operator": "is_true", "label": "Registered person with a disability", "required": true},
+      {"field": "has_cnic", "operator": "is_true", "label": "Holds a CNIC with disability status", "required": true}
+    ],
+    "required_documents": [
+      {"name": "Disability certificate", "description": "Assessment certificate from the Social Welfare department"},
+      {"name": "CNIC", "description": "CNIC endorsed with disability logo"}
+    ],
+    "application_channel": "Punjab Social Protection Authority",
+    "source_url": "https://pspa.punjab.gov.pk/",
+    "source_date": "2025-06-01",
+    "effective_date": "2025-01-01"
+  },
+  {
+    "code": "EOBI_OLD_AGE",
+    "name": "EOBI Old-Age Pension",
+    "description": "Monthly pension for registered private-sector workers who have reached retirement age and completed the minimum insurable service.",
+    "category": "pension",
+    "country": "PK",
+    "region": "National",
+    "eligibility_rules": [
+      {"field": "age", "operator": "gte", "value": 60, "label": "Age 60 or above (55 for women)", "required": true},
+      {"field": "eobi_registered", "operator": "is_true", "label": "Registered with EOBI as an insured worker", "required": true},
+      {"field": "insured_years", "operator": "gte", "value": 15, "label": "At least 15 years of insurable employment", "required": true}
+    ],
+    "required_documents": [
+      {"name": "CNIC", "description": "Valid national identity card"},
+      {"name": "EOBI registration", "description": "EOBI insured-person registration number"},
+      {"name": "Service record", "description": "Proof of contributory service"}
+    ],
+    "application_channel": "EOBI regional office",
+    "source_url": "https://www.eobi.gov.pk/",
+    "source_date": "2025-06-01",
+    "effective_date": "2025-01-01"
+  },
+  {
+    "code": "PUNJAB_RASHAN",
+    "name": "Punjab Rashan / Subsidised Food Support",
+    "description": "Targeted subsidy on essential food items for low-income households registered in Punjab.",
+    "category": "nutrition",
+    "country": "PK",
+    "region": "Punjab",
+    "eligibility_rules": [
+      {"field": "province", "operator": "eq", "value": "Punjab", "label": "Resident of Punjab", "required": true},
+      {"field": "monthly_income", "operator": "lte", "value": 60000, "label": "Monthly household income is PKR 60,000 or below", "required": true},
+      {"field": "has_cnic", "operator": "is_true", "label": "Applicant holds a valid CNIC", "required": true}
+    ],
+    "required_documents": [
+      {"name": "CNIC", "description": "Valid national identity card"}
+    ],
+    "application_channel": "Registered retailer / provincial food portal",
+    "source_url": "https://punjab.gov.pk/social-welfare-and-protection",
+    "source_date": "2025-06-01",
+    "effective_date": "2025-01-01"
+  }
+]
